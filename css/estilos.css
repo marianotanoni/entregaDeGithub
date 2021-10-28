@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.contenedor{
+    /* border: rgb(231, 228, 29) solid 5px; */
+    display: grid;
+    width: 100%;
+    /* height: 100vh; */
+    background-image: url(../img/FondoMatrix.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Audiowide', cursive;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 0.1fr 5fr 0.1fr; */
+    position: relative;
+    z-index: 20;
+}
+
+/* estilos de header*/
+
+
+.header{
+    border: black solid 1px;
+    border-radius: 10px;
+    margin: 10px;
+    display: grid;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* justify-content: space-evenly; */
+    grid-area: header;
+    background-image: url(../img/FondoHeader.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imagenLogo{
+    width: 150px;
+}
+.inicio{
+    font-size: 20px;
+    color: white;
+}
+
+li:hover li{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+li:hover{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+/* ESTILOS DEL MAIN INDEX*/
+
+.mainIndex{
+    margin: 10px;
+    grid-area: main;
+}
+
+
+.imagen1{
+    width: 10px;
+    height: 600px;
+}
+.sectionImagenTexto{
+    display: flex;
+}
+.textoMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    animation: 1s entrada 1;
+    color: rgb(20, 221, 20);
+}
+@keyframes entrada{
+	0%{
+		opacity: 0;
+		transform: translatex(-200%)
+							skewX(30deg);
+	}
+	50%{
+		opacity: 0.8;
+		transform: translatex(-20%)
+							skewX(-30deg);
+	}
+	80%{
+		opacity: 1;
+		transform: translatex(0%)
+							skewX(15deg);
+	}
+}
+.parrafoMain{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+.fotoMain{
+    width: 50%;
+    animation: 1s veloz2 1;
+}
+@keyframes veloz2{
+	0%{
+		opacity: 0;
+		transform: translatex(200%)
+							skewX(-30deg);
+	}
+	50%{
+		opacity: 0.8;
+		transform: translatex(20%)
+							skewX(30deg);
+	}
+	80%{
+		opacity: 1;
+		transform: translatex(0%)
+							skewX(-15deg);
+	}
+}
+
+.imagenMain{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*ESTILOS DE PRODUCTOS*/
+
+.productos{
+    color: rgb(20, 221, 20);
+    text-align: center;
+}
+.productosh2{
+    color:  rgb(20, 221, 20);
+}
+.contenedorDeProductos{
+    /* border: solid 2px red; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.fotoProducto{
+    border: solid 5px rgb(20, 221, 20);
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    padding: 5px;
+    margin: 5px;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    align-items: center;
+
+}
+.fotoProducto img{
+    width: 100%;
+}
+.fotoProducto p{
+    color: rgb(20, 221, 20);
+    background-color: black;
+}
+
+ 
+/*ESTILOS DEL MAIN COMPUTACION*/
+
+.computacion{
+    color: rgb(20, 221, 20);
+    text-align: center;
+}
+.sectionTextoComputacion{
+    /* border: solid 1px blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.parrafoMainComputacion{
+    color: rgb(20, 221, 20);
+    text-align: center;
+    font-size: 20px;
+    border: solid 1px rgb(20, 221, 20);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 500px;
+}
+
+.parrafoMainComputacion:hover{
+    font-size: 23px;
+    border: solid 5px;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/*ESTILOS DEL MAIN ELECTRICIDAD*/
+
+.electricidad{
+    color: rgb(20, 221, 20);
+    text-align: center;
+}
+.sectionTextoElectricidad{
+    /* border: solid 1px blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.parrafoMainElectricidad{
+    color: rgb(20, 221, 20);
+    text-align: center;
+    font-size: 20px;
+    border: solid 1px rgb(20, 221, 20);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 500px;
+}
+
+.parrafoMainElectricidad:hover{
+    font-size: 23px;
+    border: solid 5px;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+/* ESTILOS MAIN CONTACTO */
+.mainContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario{
+    width: 500px;
+    background-color: lightgreen;
+    border: solid 5px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-family: 'Audiowide', cursive;
+    font-size: 20px;
+}
+
+
+/* ESTILOS DEL FOOTER*/
+.footer{
+    /* border: solid 1px rgb(20, 221, 20); */
+    background-color: black;
+    /* margin: 10px; */
+    /* height: 100px; */
+    font-family: Arial, Helvetica, sans-serif;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 10px;
+}
+.redes{
+    text-align: center;
+}
+
+.imagenFooter{
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+.imagenFooter:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.menu{
+    text-align: center;
+}
+
+.linkFooter{
+    
+    text-decoration: none;
+    color: rgb(20, 221, 20);
+
+}
